@@ -1,0 +1,68 @@
+<app-managernav></app-managernav>
+<div class="container">
+    <h2>Feedback Details</h2>
+    <!-- <input type="text" placeholder="Search..." [(ngModel)]="searchTitle" (input)="searchProject()"> -->
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Username</th>
+          <th>Feedback</th>
+         <th>Posted Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+       
+  
+
+
+
+  <tr *ngFor="let feedback of feedbacks;let i =index">
+    <td>{{ i+1}}</td>
+    <td>{{ feedback.user ? feedback.user.username : "" }}</td>
+    <td>{{ feedback.feedbackText }}</td>
+    <td>{{ feedback.date }}</td>
+    <td>
+      <button (click)="viewFeedback(feedback)" class="view">View</button>
+    </td>
+  </tr>
+  </tbody>
+  </table>
+
+
+<!-- Popup Modal -->
+<div class="popup" *ngIf="selectedFeedback">
+  <div class="popup-content">
+    <span class="close" (click)="closePopup()">&times;</span>
+    <h3>User Details</h3>
+    <p><strong>Username:</strong> {{ selectedFeedback.user?.username }}</p>
+    <p><strong>Email:</strong> {{ selectedFeedback.user?.email }}</p>
+    <p><strong>Feedback:</strong> {{ selectedFeedback.feedbackText }}</p>
+    <p><strong>Date:</strong> {{ selectedFeedback.date }}</p>
+  </div>
+</div>
+
+ <!-- <tr *ngFor="let feedback of feedbacks">
+          <td>{{ feedback.feedbackId }}</td>
+          <td>{{(feedback.user !=null)? feedback.user.username : ""}}</td>
+          <td>{{feedback.feedbackText}}</td>
+          <td>{{feedback.date}}</td>
+          <td>
+            <button (click)="deleteFeedback(feedback.feedbackId)">View</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!
+    <div *ngIf="selectedFeedback" class="modal">
+      <div class="modal-content">
+        <span class="close" (click)="openDetails()">&times;</span>
+        <h2>Feedback Details</h2>
+        <p><strong>S.No:</strong> {{ selectedFeedback.sNo }}</p>
+        <p><strong>Posted Date:</strong> {{ selectedFeedback.dateFrom }}</p>
+        <p><strong>Feedback:</strong> {{ selectedFeedback.feedback }}</p>
+       
+      </div>
+    </div> -->
