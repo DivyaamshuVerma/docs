@@ -1,0 +1,26 @@
+<app-employeenav></app-employeenav>
+
+<div class="container">
+    <br><br>
+    <form [formGroup]="feedBackForm" (ngSubmit)="addFeedBack()">
+        <h1>Add FeedBack</h1>
+        <div>
+            <label for="feedback">Feedback<span style="color: red;">*</span></label><br>
+            <textarea id="feedBackText" name="feedBackText" rows="4" cols="50" formControlName="feedbackText"></textarea><br>
+            <div *ngIf="feedBackForm.get('feedbackText').touched && feedBackForm.get('feedbackText').invalid" style="color: red;">
+                FeedBack is required
+            </div>
+            <button type="submit" [disabled]="feedbackText.invalid">Submit</button>
+        </div>
+    </form>
+ 
+    <!-- Pop-up Modal HTML -->
+    <div id="successPopup" class="modal">
+        <div class="modal-content">
+            <span class="close" (click)="closePopup()">x</span>
+            <p>Successfully Added!</p>
+            <button id="close" (click)="closePopup1()">Ok</button>
+        </div>
+    </div>
+</div>
+ 

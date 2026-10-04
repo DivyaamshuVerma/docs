@@ -1,0 +1,118 @@
+.container {
+    
+    /* background-image: url('../../../assets/abstract-background-light-steel-blue-wallpaper-image_53876-102530.jpg'); */
+  height: 88vh;
+  background-repeat: none;
+  background-repeat: no-repeat;
+  
+  background-position: center;
+  background-size: cover;
+}
+
+/* Style the form and elements */
+form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%; 
+    margin-top: 10%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* border: 8px solid; */
+/* border-image: linear-gradient(to right, rgb(157,153,232), rgba(46,245,196)) 1; */
+}
+form h1{
+    text-align: center;
+    margin-bottom: 10px;
+    color: #34495e;
+    border-bottom: rgb(244, 168, 28) solid 2px ;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #34495e;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #34495e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}button[type="submit"]:hover{
+    background-color: #ff7362;
+}
+
+button[type="submit"]:disabled {
+    background-color: #34495e;
+    cursor: not-allowed;
+}
+
+/* Modal Popup Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#close {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
