@@ -1,0 +1,31 @@
+<div class="navbar">
+    <div class="heading">
+        <img src="../../../assets/protech-suite-high-resolution-logo-transparent (1).png" alt="logo"/><span>ProTech </span>
+    </div>
+    <div class="links">
+    <span>Employee/{{username}}</span>
+        <a routerLink="/home">Home</a>
+         
+        <div class="dropdown" id="Project">Project
+            <div class="child">
+                <a routerLink="/eviewproject">View Project</a>
+            </div> 
+        </div>
+
+        <div class="dropdown" id="projectproposal">Proposal
+            <div class="child">
+                <a routerLink="/eaddproposal">Add Proposal</a>
+                <a routerLink="/eviewproposal">View Proposal</a>
+            </div>
+        </div>
+        
+        <div class="dropdown" id="Feedback">Feedback
+            <div class="child">
+                <a routerLink="/eaddfeedback">Add Feedback</a>
+                <a routerLink="/eviewfeedback">View Feedback</a>
+            </div>
+        </div>
+        
+        <a (click)="logout()" routerLink="/login">Logout</a>
+    </div>  
+</div>
