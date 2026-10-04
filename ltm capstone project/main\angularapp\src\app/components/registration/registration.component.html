@@ -1,0 +1,182 @@
+<app-navbar></app-navbar>
+<!--
+<div class="container">
+<h2>Registration</h2>
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <label for="username">Username</label>
+    <input id="username" formControlName="username" type="text"><br>
+    <div *ngIf="registrationForm.get('username').invalid && registrationForm.get('username').touched">
+      Username is required.
+    </div><br>
+  
+    <label for="email">Email</label>
+    <input id="email" formControlName="email" type="email" /><br>
+    <div *ngIf="registrationForm.get('email').invalid && registrationForm.get('email').touched">
+      Enter a valid email.
+    </div><br>
+  
+    <label for="password">Password</label>
+    <input id="password" formControlName="password" type="password" /><br>
+    <div *ngIf="registrationForm.get('password').invalid && registrationForm.get('password').touched">
+      Password must be at least 6 characters long, contain one uppercase letter, one lowercase letter, one number, and one special character.
+    </div><br>
+  
+    <label for="confirmPassword">Confirm Password</label>
+    <input id="confirmPassword" formControlName="confirmPassword" type="password" /><br>
+    <div *ngIf="registrationForm.get('confirmPassword').invalid && registrationForm.get('confirmPassword').touched">
+      Passwords must match.
+    </div><br>
+  
+    <label for="mobile">Mobile</label>
+    <input id="mobile" formControlName="mobileNumber" type="text" /><br>
+    <div *ngIf="registrationForm.get('mobileNumber').invalid && registrationForm.get('mobileNumber').touched">
+      Enter a valid mobile number.
+    </div><br>
+  
+  <label for="role">Role</label>
+    <select id="role" formControlName="role">
+      <option value="Manager">Manager</option>
+      <option value="Employee">Employee</option>
+    </select>
+    <div *ngIf="registrationForm.get('role').invalid && registrationForm.get('role').touched">
+      Role is required.
+    </div><br>
+  
+  
+    <button type="submit" [disabled]="registrationForm.invalid" (click)="onSubmit()">Register</button>
+  </form>
+  <div id="login">
+  
+    <button routerLink="/login">LogIn</button>
+  </div>
+</div> -->
+
+<!-- 
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div class="user-details">
+        <div class="input-box">
+          <label class="details" for="username">Username<span style="color: red;">*</span></label>
+          <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input type="text" id="username" placeholder="Enter the name" formControlName="username" required><br>
+          </div>
+          <div *ngIf="username.touched && username.invalid" class="error-message" style="color: red;">*Username is required</div>
+        </div>
+        <div class="input-box">
+          <label class="details" for="email">Email<span style="color: red;">*</span></label>
+          <div class="input-container">
+            <i class="fa fa-envelope icon"></i>
+            <input type="email" id="email" placeholder="Enter the email" formControlName="email" required><br>
+          </div>
+          <div *ngIf="email.touched && email.invalid" class="error-message" style="color: red;">*Please enter a valid email</div>
+        </div>
+        <div class="input-box">
+          <label class="details" for="password">Password<span style="color: red;">*</span></label>
+          <div class="input-container">
+            <i class="fa fa-lock icon"></i>
+            <input type="password" id="password" placeholder="Enter the password" formControlName="password" required><br>
+          </div>
+          <div *ngIf="registrationForm.get('password').touched && registrationForm.get('password').invalid" class="error-message" style="color: red;">
+            *Password must include at least one uppercase letter, one lowercase letter, one digit, and one special character
+          </div>
+        </div>
+        <div class="input-box">
+          <label class="details" for="confirmPassword">Confirm Password<span style="color: red;">*</span></label>
+          <div class="input-container">
+            <i class="fa fa-lock icon"></i>
+            <input type="password" id="confirmPassword" placeholder="Enter the password" formControlName="confirmPassword" required><br>
+          </div>
+          <div *ngIf="registrationForm.get('confirmPassword').touched && registrationForm.get('confirmPassword').invalid" class="error-message" style="color: red;">
+            *Confirm Password is required
+          </div>
+          <div *ngIf="registrationForm.errors?.passwordMismatch && registrationForm.get('confirmPassword').touched && registrationForm.get('confirmPassword').touched " class="error-message" style="color: red;">
+            *Passwords do not match
+          </div>
+        </div>
+        <div class="input-box">
+          <label class="details" for="mobileNumber">Mobile Number<span style="color: red;">*</span></label>
+          <div class="input-container">
+            <i class="fa fa-phone icon"></i>
+            <input type="text" id="mobileNumber" placeholder="Enter the mobile number" formControlName="mobileNumber" required><br>
+          </div>
+          <div *ngIf="mobileNumber.touched && mobileNumber.invalid" class="error-message" style="color: red;">*Mobile number must be 10 digits</div>
+        </div>
+        <div class="input-box">
+          <label class="details" for="role">Role<span style="color: red;">*</span></label>
+          <div class="input-container">
+            <i class="fa fa-briefcase icon"></i>
+            <select id="role" formControlName="role" placeholder="Select Role">
+             
+              <option class="input-box" value="Manager">Manager</option>
+              <option class="input-box" value="Employee">Employee</option>
+            </select>
+          </div>
+          <div *ngIf="role.touched && role.invalid" class="error-message" style="color: red;">*Role is required</div>
+        </div>
+        <button class="btn btn-primary" type="submit" [disabled] ="registrationForm.invalid">Register</button>
+      </div>
+    </form>
+  </div>
+</body> -->
+
+<body>
+  <div class="wrapper">
+    <h2>Registration</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      
+      <div class="input-field">
+        <input type="text" id="username" formControlName="username" required>
+        <label for="username">Username</label>
+        <div *ngIf="username.touched && username.invalid" class="error-message" style="color: red;">*Username is required</div>
+      </div>
+      
+      <div class="input-field">
+        <input type="email" id="email"  formControlName="email" required>
+        <label for="email">Email</label>
+        <div *ngIf="email.touched && email.invalid" class="error-message" style="color: red;">*Please enter a valid email</div>
+      </div>
+      
+      <div class="input-field">
+        <input type="password" id="password"  formControlName="password" required>
+        <label for="password">Password</label>
+        <div *ngIf="registrationForm.get('password').touched && registrationForm.get('password').invalid" class="error-message" style="color: red;">
+          *Password must include at least one uppercase letter, one lowercase letter, one digit, and one special character
+        </div>
+      </div>
+      
+      <div class="input-field">
+        <input type="password" id="confirmPassword"  formControlName="confirmPassword" required>
+        <label for="confirmPassword">Confirm Password</label>
+        <div *ngIf="registrationForm.get('confirmPassword').touched && registrationForm.get('confirmPassword').invalid" class="error-message" style="color: red;">
+          *Confirm Password is required
+        </div>
+        <div *ngIf="registrationForm.errors?.passwordMismatch && registrationForm.get('confirmPassword').touched" class="error-message" style="color: red;">
+          *Passwords do not match
+        </div>
+      </div>
+      
+      <div class="input-field">
+        <input type="text" id="mobileNumber"  formControlName="mobileNumber" required>
+        <label for="mobileNumber">Mobile Number<span style="color: red;"></span></label>
+        <div *ngIf="mobileNumber.touched && mobileNumber.invalid" class="error-message" style="color: red;">*Mobile number must be 10 digits</div>
+      </div>
+      
+      <div class="input-field">
+        <select id="role" formControlName="role" required>
+          <option class="input" value="Manager">Manager</option>
+          <option  class="input" value="Employee">Employee</option>
+        </select>
+        <label for="role">Role<span style="color: red;"></span></label>
+        <div *ngIf="role.touched && role.invalid" class="error-message" style="color: red;">*Role is required</div>
+      </div>
+      
+      <button type="submit" [disabled]="registrationForm.invalid" >Register</button>
+    </form>
+  </div>
+</body>
