@@ -1,0 +1,30 @@
+<app-navbar *ngIf="!role"></app-navbar>
+<app-employeenav  *ngIf="role==='Employee'"></app-employeenav>
+<app-managernav *ngIf="role==='Manager'"></app-managernav>
+<!-- <div>
+    <h1>Pro-Tech-Suite</h1>
+    <p>The ProTech Suite is a web-based application designed to streamline project management processes wtihtin an organization. This system aims to provide a centralized platfrom for managing project proposals, projects, tasks, and user roles effectively. By offering features such as project proposal submission, project creation, task assignment, and statu tracking, the PMS facilitates collaboration, improves communication and enhances productivity across project teams.</p>
+</div> -->
+
+<body>
+<section class="hero-section">
+<div class="hero">
+  <h2>Pro-Tech-Suite</h2>
+  <p>
+   
+    The ProTech Suite is a web-based application that streamlines project management by&nbsp; 
+    centralizing project proposals, tasks, and user roles. It enhances collaboration&nbsp;
+    communication, and productivity through features like project creation, task assignment&nbsp;
+    and status tracking.
+  </p>
+  <!-- <div class="buttons">
+    <a routerLink="/login" class="join">Manager</a>
+    <a routerLink="/login" class="learn">Employee</a>
+  </div> -->
+  <!-- <pre id="username">Welcome Back,{{username}}</pre> -->
+</div>
+<div class="img">
+  <img src="../../../assets/1683213014287-removebg-preview (1).png" alt="hero image"/>
+</div>
+</section>
+</body>
