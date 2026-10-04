@@ -1,0 +1,27 @@
+<app-employeenav></app-employeenav>
+<!-- <navbar-component></navbar-component> -->
+
+<div class="container">
+    <h2>My Proposals</h2>
+    <table>
+        <thead>
+            <th>S.No</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </thead>
+        <tbody>
+            <!-- <div *ngIf="x>0"> -->
+                <tr *ngFor="let proposal of proposals;let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{proposal.proposalTitle}}</td>
+                    <td>{{proposal.proposalDescription}}</td>
+                    <td>{{proposal.status}}</td>
+                    <td><button *ngIf="proposal.status!=='Approved'"  [disabled]="false" (click)="deleteProjectProsposal(proposal.proposalId)" >Delete</button></td>
+                </tr>
+            <!-- </div> -->
+            
+        </tbody>
+    </table>
+</div>
