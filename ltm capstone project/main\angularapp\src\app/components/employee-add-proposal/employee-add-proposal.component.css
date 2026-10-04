@@ -1,0 +1,114 @@
+
+.project{
+  /* background-image: url('../../../assets/abstract-background-light-steel-blue-wallpaper-image_53876-102530.jpg'); */
+  height: 90vh;
+  background-repeat: none;
+  background-repeat: no-repeat;
+  
+  background-position: center;
+  background-size: cover;
+}
+form {
+    max-width: 650px;
+   
+    margin: 4px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-sizing: border-box; /* Add this line */
+    /* border: 8px solid; */
+/* border-image: linear-gradient(to right,rgb(236 ,128,232), rgba(46,245,196)) 1; */
+  }
+  form h1{
+    text-align: center;
+    padding-bottom: 10px;
+    color: #34495e;
+    border-bottom: rgb(244, 168, 28) solid 2px ;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+  
+  /* Form labels and inputs */
+  label {
+    display: block;
+    /* margin-bottom: 5px; */
+    font-weight: bold;
+    color: #34495e;
+  }
+  
+  input, textarea {
+    width: 100%; /* Change to 100% */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Add this line */
+  }
+  
+  input[type="date"] {
+    padding: 10px 10px 10px 25px;
+  }
+  
+  textarea {
+    height: 100px;
+    padding: 10px;
+    resize: vertical;
+  }
+  
+  /* Form buttons */
+  button[type="submit"] {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #34495e;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #ff7362;
+  }
+  
+  button[type="submit"]:disabled {
+    background-color: #34495e;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    form {
+        margin: 20px;
+        padding: 10px;
+    }
+    label {
+        font-size: 14px;
+    }
+    input, textarea {
+        font-size: 14px;
+    }
+    button[type="submit"] {
+        font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    form {
+        margin: 10px;
+        padding: 5px;
+    }
+    label {
+        font-size: 12px;
+    }
+    input, textarea {
+        font-size: 12px;
+    }
+    button[type="submit"] {
+        font-size: 12px;
+    }
+  }

@@ -1,0 +1,18 @@
+<app-employeenav></app-employeenav>
+
+<div class="project">
+ <br><br>
+
+    <form [formGroup]="projectProposalForm" (ngSubmit)="addProjectProposal()" >
+        <h1>Add Proposal</h1>
+        <div>
+            <label for="title">Title </label><br>
+            <input type="text" id="title" class="title" formControlName="proposalTitle">
+        </div>
+        <div>
+            <label for="description">Description </label><br>
+            <textarea id="description" class="description" formControlName="proposalDescription"></textarea>
+        </div>
+        <button type="submit" [disabled]="projectProposalForm.invalid">Submit Proposal</button>
+    </form>
+</div>
