@@ -1,0 +1,121 @@
+<app-managernav></app-managernav>
+<form [formGroup]="projectForm" (ngSubmit)="addProject()" class="form-container">
+  <h1>Add Project</h1>
+  
+  <div class="form-group">
+    <label for="title">Project Title</label>
+    <input type="text" id="title" formControlName="projectTitle" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="description">Project Description</label>
+    <textarea id="description" formControlName="projectDescription" required></textarea>
+  </div>
+  
+  <div class="form-group">
+    <label for="startDate">Start Date</label>
+    <input type="date" id="startDate" formControlName="startDate" required (change)="onpreDateChange()">
+    <!-- <div *ngIf="projectForm.get('startDate').errors?.required">Start date is required</div> -->
+    <div *ngIf="projectForm.errors?.dateInvalidpre">start date should be greater than Present Date</div>
+ 
+  </div>
+  
+  <div class="form-group">
+    <label for="endDate">End Date</label>
+    <input type="date" id="endDate" formControlName="endDate" required (change)="onDateChange()">
+    <!-- <div *ngIf="projectForm.get('endDate').errors?.required">End date is required</div> -->
+    <div *ngIf="projectForm.errors?.dateInvalid">End date should be greater than Start Date</div>
+ 
+  </div>
+  
+  <div class="form-group">
+    <label for="frontEnd">Front End Tech Stack</label>
+    <input type="text" id="frontEnd" formControlName="frontEndTechStack" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="backEnd">Back End Tech Stack</label>
+    <input type="text" id="backEnd" formControlName="backendTechStack" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="database">Database</label>
+    <input type="text" id="database" formControlName="databaseStack" required>
+  </div>
+  
+  <!-- <div class="form-group">
+    <label for="status">Status</label>
+    <input type="text" id="status" formControlName="status" required>
+  </div> -->
+  
+  <button type="submit" [disabled]="projectForm.invalid" class="btn submit-btn">Submit</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<form [formGroup]="projectForm" (ngSubmit)="addProject()">
+ <h1>Add Project</h1>
+  <div>
+    <label for="title">Project Title</label>
+    <input type="text" id="title" formControlName="projectTitle" required>
+  </div>
+  <div>
+    <label for="description">Project Description</label>
+    <textarea id="description" formControlName="projectDescription" required></textarea>
+  </div>
+  <div>
+    <label for="startDate">Start Date</label>
+    <input type="date" id="startDate" formControlName="startDate" required>
+  </div>
+  <div>
+    <label for="endDate">End Date</label>
+    <input type="date" id="endDate" formControlName="endDate" required>
+  </div>
+  <div>
+    <label for="frontEnd">Front End Tech Stack</label>
+    <input type="text" id="frontEnd" formControlName="frontEndTechStack" required>
+  </div>
+  <div>
+    <label for="backEnd">Back End Tech Stack</label>
+    <input type="text" id="backEnd" formControlName="backendTechStack" required>
+  </div>
+  <div>
+    <label for="database">Database</label>
+    <input type="text" id="database" formControlName="databaseStack" required>
+  </div>
+  <div>
+    <label for="status">Status</label>
+    <input type="text" id="status" formControlName="status" required>
+  </div>
+  <button type="submit" [disabled]="projectForm.invalid">Submit</button>
+</form>
+ -->
+ 
