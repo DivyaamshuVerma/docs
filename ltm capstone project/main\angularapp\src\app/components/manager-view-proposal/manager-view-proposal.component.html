@@ -1,0 +1,33 @@
+<app-managernav></app-managernav>
+
+
+<div class="projects-container ">
+  <h1>All Project Proposals</h1>
+  <!-- <input type="text" placeholder="Search" [(ngModel)]="searchTerm"> -->
+    <input type="text" placeholder="Search..." [(ngModel)]="searchTerm" (input)="filterProposals()" />
+    <table class="content-table"><!--*ngIf="filteredProposals.length > 0; else noData" --> 
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Proposal Title</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let proposal of proposals; let i = index"> 
+          <td>{{ i + 1 }}</td>
+          <td>{{ proposal.proposalTitle }}</td>
+          <td>{{ proposal.proposalDescription }}</td>
+          <td>{{ proposal.status }}</td>
+          <td>
+            <button class="edit" *ngIf="proposal.status !== 'Approved'" (click)="approveproposal(proposal)">Approve</button>
+            <button  class="delete" *ngIf="proposal.status !== 'Rejected'" (click)="rejectproposal(proposal)">Reject</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+   
+  </div>
+
