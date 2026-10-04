@@ -1,0 +1,39 @@
+<app-managernav></app-managernav>
+<div class="projects-container">
+  <h1>Project List</h1>
+  <input type="text" placeholder="Search By Title" [(ngModel)]="searchTitle" (input)="searchProject()">    <table class="content-table">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Front End Tech Stack</th>
+          <th>Backend Tech Stack</th>
+          <th>Database</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let project of projects; let i = index">
+          <td>{{ i+1 }}</td>
+          <td>{{ project.projectTitle}}</td>
+          <td>{{ project.projectDescription}}</td>
+          <td>{{ project.startDate }}</td>
+          <td>{{ project.endDate }}</td>
+          <td>{{ project.frontEndTechStack }}</td>
+          <td>{{ project.backendTechStack }}</td>
+          <td>{{project.databaseStack}}</td>
+          <td>{{ project.status }}</td>
+          <td>
+            <button class="edit" [routerLink]="['/meditproject']" [queryParams]="{Id:project.projectId}">Edit</button>&nbsp;
+            <button class="delete" (click)="deleteProject(project.projectId)">Delete</button>
+            <button class="edit" [routerLink]="['/massignproject']">Assign Project</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
