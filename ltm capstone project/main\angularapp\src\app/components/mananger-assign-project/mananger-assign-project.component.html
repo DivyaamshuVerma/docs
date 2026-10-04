@@ -1,0 +1,50 @@
+<app-managernav></app-managernav>
+<div class="projects-container">
+  <h1>Project List</h1>
+    <input type="text" placeholder="Search By Title" [(ngModel)]="searchTitle" (input)="searchProject()">
+    <!-- <div class="form-group input-info" >
+        <input class="form-control" id="table-search" name="q" placeholder="Search By Title" required [(ngModel)]="searchTitle" (input)="searchProject()" >
+    </div> -->
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Front End Tech Stack</th>
+          <th>Backend Tech Stack</th>
+          <th>Database</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let project of projects; let i = index">
+          <td>{{ i+1 }}</td>
+          <td>{{ project.projectTitle}}</td>
+          <td>{{ project.projectDescription}}</td>
+          <td>{{ project.startDate }}</td>
+          <td>{{ project.endDate }}</td>
+          <td>{{ project.frontEndTechStack }}</td>
+          <td>{{ project.backendTechStack }}</td>
+          <td>{{project.databaseStack}}</td>
+          <td>{{ project.status }}</td>
+          <td>
+            <select #userSelect [disabled]="project.status==='Assigned'">
+              <option *ngIf="project.status==='Assigned'" selected>{{project.user.username}}</option>
+              <option>Select Employee</option>
+                <option *ngFor="let u of userEmp" [value]="u.userId">{{u.username}}</option>
+            </select>
+            <button class="delete" *ngIf="project.status!=='Assigned'"  (click)="editproject(userSelect.value,project)">Assign</button>
+            <button class="delete" *ngIf="project.status==='Assigned'"  (click)="editReproject(userSelect.value,project)">Release</button>
+            <button disabled *ngIf="project.status=='Assigned'">Assigned</button>
+            <button disabled *ngIf="project.status=='Pending'">Reassign</button>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
