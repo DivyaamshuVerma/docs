@@ -1,0 +1,23 @@
+<app-employeenav></app-employeenav>
+<div class="container">
+  <h2>Employee Feedback</h2>
+    <table>
+      <tr>
+	<th>Sr no</th>
+        <th>Feedback</th>
+        <th>Action</th>
+      </tr>
+    
+      <tr *ngFor="let feedback of feedbacks;let i=index">
+        <td>{{i+1}}</td>
+        <td>{{ feedback.feedbackText }}</td>
+        <td>
+          <button (click)="deleteFeedback(feedback.feedbackId)">Delete</button>
+        </td>
+      </tr>
+    
+    </table>
+  </div>
+  
+  
+

@@ -1,0 +1,98 @@
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 75%;
+    overflow-x: auto;
+    
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+th, td {
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+   color: white;
+}
+td{
+    color:#34495e;
+}
+/* Header styling */
+th {
+    background-color: #34495e;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive styling for mobile */
+@media screen and (max-width: 600px) {
+    table {
+        width: 100%;
+        display: block;
+    }
+    
+    thead {
+        display: none; /* Hide table header */
+    }
+    
+   
+   
+   td:hover {
+        color: #333; 
+        background-color: #9c7388; 
+        transition: background-color 0.3s ease; 
+    }
+    
+    td {
+        display: block;
+        text-align: right;
+        font-size: 14px;
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+    
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: left;
+    }
+    
+    td:last-child {
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+/* Button styling */
+button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #e09d9d;
+}
+
+/* Add margin to the heading */
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color:#34495e
+}
