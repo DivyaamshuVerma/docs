@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+body {
+    /* font-family: 'Bebas Neue', sans-serif; */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+span{
+    padding-top: -10px;
+    padding-left: 2px ;
+    font-size: 25px;
+}
+.navbar {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #34495e;
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   
+    }
+
+.heading {
+    font-size: 35px;
+    /* font-family: 'Bebas Neue', sans-serif; */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding-top: x;
+    color: #ffffff;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+    font-family: "Archivo", sans-serif;
+}
+
+.links a {
+    color: #ffffff;
+    text-decoration: none;
+    
+    padding: 10px 20px;
+    background-color:  #34495e;
+    
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.heading a{
+    color: #ffffff;
+    text-decoration: none;
+    padding-top: 3px;
+    background-color:  #34495e;
+    
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.links a:hover {
+   border-bottom: rgb(236, 128, 4) solid 1px;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .links a {
+        width: 100%;
+        text-align: center;
+    }
+}
+.heading img {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+}
