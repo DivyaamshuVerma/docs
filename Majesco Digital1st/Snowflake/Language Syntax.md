@@ -1,0 +1,57 @@
+##### **Language Syntax:**
+
+
+
+* Snowflake is a case sensitive language. This applies to all the keywords, object models, event references as well.
+* Snowflake is NOT space sensitive language. This applies to space between two separate words, lines between two words etc.ﾠ
+
+
+
+**Correct examples:**
+
+
+
+i] def
+
+&#x20;  x = 5
+
+
+
+ii] def xﾠ ﾠ ﾠ =ﾠ ﾠ 5ﾠ
+
+
+
+**Incorrect examples:**
+
+
+
+i] def x as newﾠﾠMasterModel:ﾠ ﾠ ﾠ \\\*anything connected with symbols is one entity\*/
+
+ﾠ ﾠ ﾠ ﾠ ﾠ ﾠ ﾠ ﾠ ﾠ ﾠ ﾠ ﾠ Root
+
+
+
+ii] def x as nﾠ ﾠ ﾠ ﾠ ﾠ ﾠ ﾠ ﾠ ﾠ ﾠ ﾠ \\\* space between characters of a single word is not allowed \*/
+
+ﾠ ﾠ ﾠ ﾠ ﾠ  ew MasterModel:Root
+
+
+
+###### **Comments:**
+
+
+
+\# is used to identify a single line comment
+
+
+
+/\* \*/ is used to identify a comment for a block of code that can span multiple rows
+
+
+
+
+
+
+
+
+
